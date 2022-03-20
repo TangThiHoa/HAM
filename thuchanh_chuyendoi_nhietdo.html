@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <p>
+        <label> DO F</label>
+        <input id="input do f" type="number" placeholder="DO F"
+               oninput="DOC()"
+               onchange="DOC()">
+    </p>
+    <p>Celsius: <span id="output"></span></p>
+</form>
+
+<script>
+    let nhietdof=document.getElementById("input do f")
+
+    function DOC() {
+        document.getElementById("output").innerHTML = (nhietdof.value-32) / 1.8;
+    }
+
+
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2> Add New Product </h2>
+<input type="text" id="name">
+<button onclick="add()">Add</button>
+
+<h2> Display All Product </h2>
+<div id="sl"></div>
+<div id="list"></div>
+
+<script>
+    let slview = document.getElementById('sl');
+    let dlview = document.getElementById('list');
+    let ipname = document.getElementById("name")
+    let productlist = [ "Ôtô", "Tàu hỏa","Máy bay","Xe máy ","Xe đạp" ];
+    hien();
+
+
+    function add() {
+        let tenSP = ipname.value;
+        productlist.push(tenSP);
+        hien()
+
+    }
+    function hien() {
+        slview.innerHTML=productlist.length+" sản phẩm";
+        let bee ="";
+        for (let i = 0 ; i<productlist.length;i++){
+            bee += productlist[i]+"<br>";
+        }
+        dlview.innerHTML= bee;
+
+    }
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
