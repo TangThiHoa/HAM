@@ -6,8 +6,17 @@
 </head>
 <body>
 <script>
-    let kt=+prompt("Nhập ký tự");
-
+    let a = prompt("nhập kí tự & số :");
+    function check (x){
+        let text=" "
+        if (isNaN(x)){
+            text="không phải kí số"
+            return text
+        }else {
+            text="kí tự số "
+        }return text
+    }
+    alert(check(a))
 
 
 
